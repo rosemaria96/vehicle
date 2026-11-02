@@ -1,0 +1,18 @@
+<h2>Vehicle Details</h2>
+
+<p>Name: {{ vehicle.vehicle_name }}</p>
+
+<p>Type: {{ vehicle.vehicle_type }}</p>
+
+<p>Rent Per Day: {{ vehicle.rent_per_day }}</p>
+
+<p>
+Availability:
+{% if vehicle.available %}
+    Available
+{% else %}
+    Not Available
+{% endif %}
+</p>
+
+<a href="{% url 'vehicle_list' %}">Back to List</a>

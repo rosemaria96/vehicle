@@ -1,0 +1,43 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial;
+    margin: 0;
+    text-align: center;
+}
+
+header {
+    background-color: navy;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background-color: white;
+    border: 2px solid navy;
+    padding: 30px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.card:hover {
+    background-color: lightblue;
+}
+
+footer {
+    background-color: navy;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.unavailable {
+    background-color: #ffcccc;
+    color: red;
+}

@@ -1,0 +1,47 @@
+{% load static %}
+
+<html>
+<head>
+    <title>Vehicle Rental Service</title>
+    <link rel="stylesheet"
+          href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+<header>
+    <h1>Vehicle Rental Service</h1>
+</header>
+
+<h2>Choose Your Vehicle</h2>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Car</h3>
+        <p>Rent a car for your trip.</p>
+    </div>
+
+    <div class="card">
+        <h3>Bike</h3>
+        <p>Rent a bike for travelling.</p>
+    </div>
+
+    <div class="card">
+        <h3>Van</h3>
+        <p>Rent a van for your journey.</p>
+    </div>
+
+</div>
+
+<a href="{% url 'add' %}">Add Vehicle</a>
+<br><br>
+
+<a href="{% url 'vehicle_list' %}">View Vehicles</a>
+
+<footer>
+    <p>Vehicle Rental Service © 2026</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<h2>Vehicle List</h2>
+
+<table border="1">
+
+<tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Rent Per Day</th>
+    <th>Availability</th>
+    <th>Action</th>
+</tr>
+
+{% for v in vehicles %}
+
+<tr class="{% if not v.available %}unavailable{% endif %}">
+
+    <td>{{ v.vehicle_name }}</td>
+
+    <td>{{ v.vehicle_type }}</td>
+
+    <td>{{ v.rent_per_day }}</td>
+
+    <td>
+        {% if v.available %}
+            Available
+        {% else %}
+            Not Available
+        {% endif %}
+    </td>
+
+    <td>
+        <a href="{% url 'detail' v.id %}">View</a>
+
+        <a href="{% url 'update' v.id %}">Update</a>
+
+        <a href="{% url 'delete' v.id %}">Delete</a>
+    </td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="{% url 'add' %}">Add New Vehicle</a>
